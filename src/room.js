@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './room.css'
 
 function Room() {
     let [islit, setlit] = useState(true)
@@ -10,9 +11,10 @@ function Room() {
     //function updateage(){
      // console.log("button clicked");
       //  setage(++age)
-    //}
+    //} this func has been shortend in onclick
     return (
-    <div>
+//    <div className={"room " +(islit? "lit":"dark")}>
+    <div className={`room ${islit? "lit":"dark"}`}>
         This room is : Lit = {islit? "lit": "dark"}
         <br/>
         Age: {age}
